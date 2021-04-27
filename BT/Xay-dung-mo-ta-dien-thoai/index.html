@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="myJs/Mobile.js"></script>
+</head>
+<body>
+<script>
+    let Nokia = new Mobile('Nokia');
+    let Blackberry = new Mobile('Blackberry');
+    Nokia.turnOn();
+    Nokia.writeMessege('Hello my friend.');
+    Nokia.sendMessage(Blackberry);
+    Blackberry.turnOn();
+    console.log(Blackberry.getInBox());
+    console.log(Blackberry.battery);
+    // Nokia.turnOff();
+    console.log(Nokia.battery);
+    Nokia.writeMessege('Good Bye!');
+    console.log(Nokia.chargeBattery());
+</script>
+</body>
+</html>

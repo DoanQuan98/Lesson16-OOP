@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="400" style="border:  1px solid black"></canvas>
+<script>
+    function Rectangle(wight, height) {
+        this.wight = wight;
+        this.height = height;
+        this.setWight = function (wight) {
+            this.wight = wight;
+        }
+        this.setHeight = function (height) {
+            this.height = height;
+        }
+
+        this.showRectangle = function (x, y) {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.rect(x, y, this.wight, this.height);
+            ctx.fill();
+        }
+    }
+
+    let rectangle = new Rectangle(200, 300);
+    rectangle.showRectangle(50, 50);
+    rectangle.setWight(300);
+    rectangle.setHeight(600);
+</script>
+</body>
+</html>
